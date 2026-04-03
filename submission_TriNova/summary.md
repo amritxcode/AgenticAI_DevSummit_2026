@@ -2,120 +2,121 @@
 
 ## Team
 
-**Team Name:** AlphaAI  
-**Members:**  
-Amrit Rayt | Developer  
-Teammate 2 | AI Logic  
-Teammate 3 | UI & Testing  
+Team Name: TriNova
 
-**Contact Email:** your@email.com  
+Members:
+Amrit Gourav Ray | Developer & Backend
+Swayam Kumar Panda | AI Logic & LLM Integration
+Anwesha Dash | UI & Testing
+
+Contact Email: [amritray43@gmail.com](mailto:amritray43@gmail.com)
 
 ---
 
 ## Problem Statement
 
-**Selected Problem:** PS-01  
-**Problem Title:** Client Onboarding  
+Selected Problem: PS-01
+Problem Title: Client Onboarding
 
-Scrollhouse currently performs client onboarding manually, taking 45 minutes per client and often missing critical steps like Airtable entry or incorrect setup. This leads to operational inefficiencies, delayed invoicing, and poor client experience.  
+Scrollhouse currently performs client onboarding manually, taking ~45 minutes per client and often missing critical steps like data entry or incorrect setup. This leads to operational inefficiencies, delayed invoicing, and poor client experience.
 
-Our system automates the entire onboarding workflow, reducing time to near zero and eliminating human error.
+Our system automates the entire onboarding workflow, reducing time to under 1 minute and minimizing human error.
 
 ---
 
 ## System Overview
 
-Our system is an Agentic AI onboarding assistant that takes client details as input and completes the onboarding process automatically.  
+Our system is an Agentic AI onboarding assistant that takes client details as input and completes onboarding automatically.
 
-It plans onboarding steps using an LLM, executes them through multiple agents, and generates outputs such as sending emails, creating folders, and storing data.  
+It uses an LLM to dynamically plan onboarding steps and executes them through multiple agents such as email sending, folder creation, and data storage.
 
-The system ensures consistency, reduces errors, and provides a final onboarding summary without manual intervention.
+The system ensures consistency, reduces errors, and generates a final onboarding summary without manual intervention.
 
 ---
 
 ## Tools and Technologies
 
-| Tool or Technology | Version or Provider | What It Does in Your System |
-|---|---|---|
-| Python | 3.x | Core backend logic |
-| Streamlit | Latest | UI for interaction |
-| Groq API | LLaMA3 | LLM planning and decision making |
-| dotenv | python-dotenv | Secure API key management |
-| SMTP | Gmail | Sends onboarding emails |
-| CSV | Built-in | Stores client records |
+| Tool or Technology | Version or Provider | Role in System     |
+| ------------------ | ------------------- | ------------------ |
+| Python             | 3.x                 | Core backend logic |
+| Streamlit          | Latest              | UI for interaction |
+| Groq API           | LLaMA3-70B          | LLM planning       |
+| dotenv             | python-dotenv       | API key management |
+| SMTP               | Gmail               | Email automation   |
+| CSV                | Built-in            | Data storage       |
 
 ---
 
 ## LLM Usage
 
-**Model(s) used:** LLaMA3-70B  
-**Provider(s):** Groq  
-**Access method:** API key  
+Model Used: LLaMA3-70B
+Provider: Groq
+Access Method: API Key
 
-| Step | LLM Input | LLM Output | Effect on System |
-|---|---|---|---|
-| Planning | Client details (brand, category) | List of onboarding steps | Determines workflow dynamically |
-| Decision fallback | Same input | Default plan | Ensures system reliability |
+| Step     | Input          | Output               | Effect                    |
+| -------- | -------------- | -------------------- | ------------------------- |
+| Planning | Client details | Python list of steps | Dynamic workflow creation |
+| Fallback | Same input     | Default steps        | Ensures reliability       |
 
 ---
 
 ## Algorithms and Logic
 
-The system uses an LLM-based planning mechanism to dynamically generate onboarding workflows.  
-
-A retry mechanism is implemented for email sending to ensure reliability.  
-
-The orchestrator maps each planned step to a corresponding agent function and executes sequentially.  
-
-Fallback logic ensures the system continues functioning even if LLM fails.
+* LLM-based planner generates onboarding workflow dynamically
+* Orchestrator maps steps to agent functions
+* Sequential execution of tasks
+* Retry logic for email sending
+* Fallback plan if LLM fails
 
 ---
 
 ## Deterministic vs Agentic Breakdown
 
-| Layer | Percentage | Description |
-|---|---|---|
-| Deterministic automation | 70% | Email sending, folder creation, data storage |
-| LLM-driven and agentic | 30% | Planning onboarding steps dynamically |
+| Layer         | Percentage | Description                |
+| ------------- | ---------- | -------------------------- |
+| Deterministic | 70%        | Email, folder, CSV storage |
+| Agentic       | 30%        | LLM-based planning         |
 
-The agentic layer determines the workflow dynamically. Without the LLM, the system would follow a fixed sequence and lose adaptability.
+Without LLM, the system becomes static and loses adaptability.
 
 ---
 
 ## Edge Cases Handled
 
-| Edge Case | How Your System Handles It |
-|---|---|
-| Duplicate client | Blocks onboarding and shows error |
-| Missing email | Stops execution and alerts user |
-| Email failure | Retry mechanism attempts resend |
+| Edge Case        | Handling         |
+| ---------------- | ---------------- |
+| Duplicate client | Blocks execution |
+| Missing email    | Stops process    |
+| Email failure    | Retry mechanism  |
 
 ---
 
 ## Repository
 
-**GitHub Repository Link:** https://github.com/YOUR_USERNAME/AgenticAI_DevSummit_2026  
-**Branch submitted:** main  
-**Commit timestamp of final submission:** (paste from GitHub commit)  
-
+GitHub Repository: https://github.com/amritxcode/AgenticAI_DevSummit_2026
+Branch: main
+Final Commit Timestamp: 10:53 PM
 ---
 
 ## Deployment
 
-**Is your system deployed?** No  
+Status: Not deployed
 
 ---
 
 ## Known Limitations
 
-- Notion, Airtable, and Google Drive are simulated (mock links)  
-- Limited edge case handling due to time constraints  
-- No real API integration for external tools  
+* Notion, Airtable, and Drive are simulated integrations
+* Limited edge case handling
+* No real external API integrations
 
 ---
 
-## Anything Else
+## Improvements and Highlights
 
-We improved the system by integrating an LLM planner, converting a static automation script into a dynamic agentic system capable of decision-making and workflow generation.
+* Converted static automation to Agentic AI system
+* LLM-driven workflow planning
+* Multi-agent orchestration
+* Retry logic for reliability
 
-The addition of retry logic and multi-agent orchestration makes the system closer to real-world enterprise automation tools.
+This system demonstrates how AI agents can automate real-world business workflows efficiently.
