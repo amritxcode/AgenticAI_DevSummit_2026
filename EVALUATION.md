@@ -9,8 +9,8 @@ Every submission is evaluated across two equal halves. Each half carries 50 poin
 
 | Component | Weight | Method |
 |---|---|---|
-| Faculty Review | 50 points | Live presentation of your system at 2:30 PM |
-| Workflow Verification | 50 points | Live deployment test or local run by judges |
+| Faculty Review | 50 points | Live presentation of your system at 2:30 PM( you must conitnue building it until 4 30, you will be called for 10 minutes for know what you have built |
+| Workflow Verification | 50 points | Live deployment test or local run after the event is over by the team and evaluate on certain parameters |
 
 Both components are mandatory. A team that does not present at 2:30 PM scores zero on the first half. A team whose system cannot be run scores zero on the second half.
 
